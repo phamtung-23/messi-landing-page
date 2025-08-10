@@ -14,13 +14,11 @@ import {
   MinimalCard,
   Flipper,
   MaksedDivDemo,
-  ImageRippleDemo,
 } from "@/components/skiper-ui";
 import {
   Trophy,
   Star,
   Heart,
-  Zap,
   Target,
   Globe,
   Award,
@@ -320,7 +318,7 @@ export default function MessiLanding() {
                     value={8}
                     className="text-2xl md:text-3xl font-bold text-yellow-400"
                   />
-                  <p className="text-gray-400 text-sm mt-1">Ballon d'Or</p>
+                  <p className="text-gray-400 text-sm mt-1">Ballon d Or</p>
                 </div>
                 <div className="text-center">
                   <AnimatedNumber
@@ -400,7 +398,7 @@ export default function MessiLanding() {
               />
             </h2>
             <p className="text-gray-300 text-lg">
-              Discover everything about Lionel Messi's incredible journey
+              Discover everything about Lionel Messis incredible journey
             </p>
           </motion.div>
 
@@ -494,7 +492,7 @@ export default function MessiLanding() {
             </h2>
             <p className="text-gray-300 text-lg max-w-3xl mx-auto">
               Experience the evolution of greatness. Hover over any image to
-              explore different moments in Messi's legendary career.
+              explore different moments in Messis legendary career.
             </p>
           </motion.div>
 
@@ -534,7 +532,7 @@ export default function MessiLanding() {
               Through the Years
             </h2>
             <p className="text-gray-200 text-lg max-w-2xl mx-auto leading-relaxed">
-              A visual journey through Messi's incredible career milestones
+              A visual journey through Messis incredible career milestones
             </p>
           </motion.div>
 
@@ -635,7 +633,7 @@ export default function MessiLanding() {
               image="/images/03922098-df85-4749-90c1-3a7ef016b457.jpeg"
             >
               <p>
-                Record-breaking eight Ballon d'Or awards, cementing his status
+                Record-breaking eight Ballon d Or awards, cementing his status
                 as the greatest player of all time.
               </p>
             </MinimalCard>
@@ -662,7 +660,7 @@ export default function MessiLanding() {
               <MarqueeItem key={index} className="mx-8">
                 <div className="flex items-center space-x-4 text-lg text-gray-300">
                   <Sparkles className="w-6 h-6 text-yellow-400" />
-                  <span className="italic">"{quote}"</span>
+                  <span className="italic">{quote}</span>
                   <Sparkles className="w-6 h-6 text-yellow-400" />
                 </div>
               </MarqueeItem>
@@ -685,7 +683,7 @@ export default function MessiLanding() {
             </h3>
 
             <p className="text-gray-300 text-lg max-w-2xl mx-auto">
-              Lionel Messi's journey is far from over. Every match, every goal,
+              Lionel Messis journey is far from over. Every match, every goal,
               every moment adds to his incredible legacy.
             </p>
 
