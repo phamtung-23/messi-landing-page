@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Messi Landing Page
 
-## Getting Started
+A tribute landing page for Lionel Messi, built with Next.js 15, React 19, Tailwind v4, and Framer Motion.
 
-First, run the development server:
+## Tech stack
+
+- Next.js 15 (App Router, Turbopack)
+- React 19
+- TypeScript
+- Tailwind CSS v4
+- Framer Motion, Swiper, react-three-fiber + drei, lucide-react
+
+## Prerequisites
+
+- Node.js 18.18+ (Node 20+ recommended)
+- Yarn (Classic 1.x or Berry)
+
+## Getting started
 
 ```bash
-npm run dev
-# or
+# 1. Install dependencies
+yarn install
+
+# 2. Start the dev server (Turbopack)
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# 3. Open the app
+# http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Scripts
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| Command       | Description                           |
+| ------------- | ------------------------------------- |
+| `yarn dev`    | Start dev server on port 3000         |
+| `yarn build`  | Production build                      |
+| `yarn start`  | Run the built app                     |
+| `yarn lint`   | Lint with ESLint (eslint-config-next) |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Project structure
 
-## Learn More
+```text
+src/
+  app/
+    layout.tsx        # Root layout, fonts, metadata
+    page.tsx          # Main landing page (edit here)
+    globals.css       # Tailwind + custom mystical theme utilities
+  components/
+    ui/               # Carousels, hover expand, dialog, button, etc.
+    skiper-ui/        # Skiper UI components (cards, marquee, AI input, ...)
+  lib/
+    utils.ts          # cn() helper (clsx + tailwind-merge)
+public/
+  images/             # Page imagery
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Notes
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- The page is a single client component at [`src/app/page.tsx`](src/app/page.tsx); edit there to change content.
+- Custom theme classes (`glass-mystical`, `text-gradient-mystical`, `animate-ghostly-pulse`, …) live in [`src/app/globals.css`](src/app/globals.css).
+- Images served from `/public/images` are referenced by absolute paths (e.g. `/images/messi-football.jpeg`).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deploy
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Optimised for [Vercel](https://vercel.com/new). Any Node host that supports Next.js 15 works (`yarn build && yarn start`).
